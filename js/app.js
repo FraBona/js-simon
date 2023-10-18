@@ -14,7 +14,7 @@ console.log(number);
 btnDomElement.addEventListener('click', function(){
   alert(number);
 
-  let counter = 30;
+  let counter = 5;
 
   let idInterval = setInterval(onInterval, 1000);
 
@@ -43,17 +43,15 @@ function searchNumber(){
   }
   console.log(checkNumber);
 
-  if(number.includes(checkNumber) === false){
-    for(let i = 0; i < 5; i++){
-      for(let j = 0; j < 5; j++){
-        if(number[i] == checkNumber[j]){
-          cont++;
-          numberDomElement.innerHTML += ' ' + number[i];
-        }
+  for(let i = 0; i < 5; i++){
+    for(let j = 0; j < 5; j++){
+      if(number[i] == checkNumber[j]){
+        cont++;
+        numberDomElement.innerHTML += ' ' + number[i];
       }
     }
-    counterDomElement.innerHTML = 'Hai indovinato: ' + cont + ' volte';
   }
+  counterDomElement.innerHTML = 'Hai indovinato: ' + cont + ' volte';
 }
 
 /*
